@@ -113,7 +113,9 @@ This section describes the contents, participants, experimental design, and prep
   - **Gender**: 10 females.  
   - **Native Language**: English (participants from Australia, Canada, UK, USA, or South Africa).  
 
+
 #### **Participant Demographics**
+
 
 | **ID**   | **Age** | **Gender** |
 |----------|---------|------------|
@@ -136,13 +138,16 @@ This section describes the contents, participants, experimental design, and prep
 | YSL      | 32      | Female     |
 | YTL*     | 36      | Male       |
 
+
 | **Mean Age** | **Gender Distribution** |
 |--------------|-------------------------|
 | 34           | 44% Male                |
 
+
  
 
 #### **Reading Material Statistics**
+
 
 | **Metric**          | **NR**  | **TSR** |
 |---------------------|---------|---------|
@@ -152,6 +157,7 @@ This section describes the contents, participants, experimental design, and prep
 | **Word Types**      | 2412    | 2437    |
 | **Word Length**     | Mean = 4.9 (SD = 2.7), Range = 1-29  | Mean = 4.9 (SD = 2.7), Range = 1-21 |
 | **Flesch Score**    | 55.38   | 50.76   |
+
 
 
 ### **2. EEG Data Acquisition**
@@ -165,6 +171,7 @@ This section describes the contents, participants, experimental design, and prep
   - Head circumference measured to select the appropriate EEG net size.  
   - Impedance of each electrode kept below **40 kOhm** to ensure proper contact.  
   - Impedance levels checked every 30 minutes after every 50 sentences.  
+
 
 | **Specification**      | **Details**                   |
 |-------------------------|-------------------------------|
@@ -182,6 +189,15 @@ This section describes the contents, participants, experimental design, and prep
 - **Tools Used**:  
   - Preprocessing performed using **Automagic (version 1.4.6)** for automatic EEG data cleaning and validation.  
   - **MARA (Multiple Artifact Rejection Algorithm)**: A supervised machine learning algorithm used for automatic artifact rejection.  
+
+
+
+![image](https://github.com/user-attachments/assets/68855ff4-a681-4ff3-89b2-bcdfb17a9234)
+
+![image](https://github.com/user-attachments/assets/c4bc2f15-7ff1-43cd-95bb-e62e66e146e9)
+
+**Figure 3 and 4** : Visualization EEG data for a single sentence.
+**(c)** Raw EEG data during a single sentence. **(d)** Same data as in **(c)** after preprocessing.
 
 
 #### EEG Channel Selection
