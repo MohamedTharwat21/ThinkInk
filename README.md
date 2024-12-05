@@ -192,9 +192,10 @@ This section describes the contents, participants, experimental design, and prep
 
 
 
-![image](https://github.com/user-attachments/assets/68855ff4-a681-4ff3-89b2-bcdfb17a9234)
+![image](https://github.com/user-attachments/assets/9edfb463-0e92-45d5-8ec3-7bc9d8874098)
 
-![image](https://github.com/user-attachments/assets/c4bc2f15-7ff1-43cd-95bb-e62e66e146e9)
+![image](https://github.com/user-attachments/assets/f2290890-278b-40aa-bc63-5054167ccfb6)
+
 
 **Figure 3 and 4** : Visualization EEG data for a single sentence.
 **(c)** Raw EEG data during a single sentence. **(d)** Same data as in **(c)** after preprocessing.
