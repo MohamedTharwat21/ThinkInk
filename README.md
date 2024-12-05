@@ -106,12 +106,17 @@ The EEG signals were recorded while participants read text from two primary sour
 ### **Statistics**
 The detailed statistics of the ZuCo Benchmark dataset are summarized in the following table (adapted from Wang and Ji, 2022):
 
+|------------------|--------------|------------- --|-------------|
 |                  | **Training** | **Validation** | **Testing** | 
 |------------------|--------------|------------- --|-------------|
 |  **Pairs**       |   14567      |  1811          |  1821       |
+|------------------|--------------|------------- --|-------------|
 |  **unique sent** |   1061       |  173           |  146        |
+|------------------|--------------|------------- --|-------------|
 |  **subject**     |   30         |  30            |  30         |
+|------------------|--------------|------------- --|-------------|
 |  **avg.words**   |  19.89       | 18.80          |  19.23      |
+|------------------|--------------|------------- --|-------------|
 
  
 Statistics for the ZuCo benchmark. **“# pairs”** means the number of EEG-text pairs, **“# unique sent”** represents the number of unique sentences, **“# subject”** denotes the number of subjects and **“avg.words”** means the average number of words of sentences.
