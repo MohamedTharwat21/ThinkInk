@@ -4,6 +4,7 @@
 ## Contents
 0. [Project Overview](#Project-Overview)
 0. [Model](#model)
+0. [Data Collection](#data-collection)
 0. [Dataset](#dataset)
 0. [Installation](#installation)  
 0. [Key Insights](#key-insights)
@@ -49,8 +50,79 @@ The model is designed to transform **word-level EEG features** , these features 
 
 
 
-## Dataset
+## Data Collection
 
 ![image](https://github.com/user-attachments/assets/942f50da-4890-410b-96e2-7f4cfe8c73b1)
 
 **Figure 5**: EEG Brain Signals.  
+
+
+## Dataset
+
+**Dataset: ZuCo Benchmark**
+The dataset used for this project is derived from the **ZuCo Benchmark**, which combines data from two EEG datasets: **ZuCo [Hollenstein et al., 2018]** and **ZuCo 2.0 [Hollenstein et al., 2020]**. This benchmark provides a rich corpus of EEG signals and eye-tracking data collected during natural reading activities, making it highly suitable for EEG-to-Text research.
+
+---
+
+### **Data Sources**
+#### Reading Materials
+The EEG signals were recorded while participants read text from two primary sources:
+- **Movie Reviews**
+- **Wikipedia Articles**
+
+#### EEG Signals
+- Each EEG-text pair in the dataset includes a sequence of **word-level EEG features**.
+- **Word-Level EEG Features (E)**: For each word, EEG signals consist of 8 frequency bands:
+  1. **Theta1 (4–6 Hz)**
+  2. **Theta2 (6.5–8 Hz)**
+  3. **Alpha1 (8.5–10 Hz)**
+  4. **Alpha2 (10.5–13 Hz)**
+  5. **Beta1 (13.5–18 Hz)**
+  6. **Beta2 (18.5–30 Hz)**
+  7. **Gamma1 (30.5–40 Hz)**
+  8. **Gamma2 (40–49.5 Hz)**
+
+---
+
+### **Feature Construction**
+- Each frequency band feature has a **fixed dimension of 105**.
+- To construct the final **word-level feature vector**, all 8 frequency band features are concatenated, resulting in a vector of size **840 (E ∈ R⁸⁴⁰)**.
+- All features are normalized using **Z-scoring**, as done in prior work (e.g., Willett et al., 2021).
+
+---
+
+### **Dataset Splitting**
+- The dataset is split into three parts:
+  - **Training Set**: 80%
+  - **Validation Set**: 10%
+  - **Test Set**: 10%
+
+### Subject Consistency
+- Each subset (train, validation, test) is designed to include unique sentences, ensuring **no overlapping sentences** between sets.
+- However, the same set of subjects is maintained across all subsets.
+
+---
+
+### **Statistics**
+The detailed statistics of the ZuCo Benchmark dataset are summarized in the following table (adapted from Wang and Ji, 2022):
+
+|                  | **Training** | **Validation** | **Testing** | 
+|------------------|--------------|------------- --|-------------|
+|  **Pairs**       |   14567      |  1811          |  1821       |
+|  **unique sent** |   1061       |  173           |  146        |
+|  **subject**     |   30         |  30            |  30         |
+|  **avg.words**   |  19.89       | 18.80          |  19.23      |
+
+ 
+Statistics for the ZuCo benchmark. **“# pairs”** means the number of EEG-text pairs, **“# unique sent”** represents the number of unique sentences, **“# subject”** denotes the number of subjects and **“avg.words”** means the average number of words of sentences.
+ 
+---
+
+## **References**
+- Hollenstein, N., et al. (2018). *ZuCo: Zurich Cognitive Language Processing Corpus.*
+- Hollenstein, N., et al. (2020). *ZuCo 2.0: The Zurich Cognitive Corpus - An Updated Dataset for EEG and Eye-Tracking Research.*
+- Willett, D., et al. (2021). *EEG Feature Standardization via Z-Scoring.*
+- Wang, S., & Ji, H. (2022). *Unified Representation Learning for EEG-to-Text Tasks.*
+
+This dataset serves as the foundation for training and validating the BrainTranslator model, enabling the transformation of EEG signals into meaningful text representations.
+
