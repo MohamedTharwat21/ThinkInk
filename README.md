@@ -20,7 +20,7 @@ The **Electroencephalography-to-Text (EEG-to-Text) generation** project lies at 
 - **Purpose**: Provides life-changing solutions for individuals who cannot speak or write due to conditions like ALS, paralysis, or severe motor impairments.  
 - **Impact**: By decoding their thoughts into text, the technology restores independence, enhances communication, and improves the quality of life.
 
----
+ 
 
 ## **Model Overview**
 
@@ -28,7 +28,7 @@ The EEG-to-Text model is designed to transform **word-level EEG features** into 
 
 The model consists of **three key components**, each critical to the processing pipeline:
 
----
+ 
 
 ### **1. Word-Level EEG Feature Construction**
 
@@ -42,7 +42,7 @@ This stage creates unified word-level features by concatenating EEG features fro
 | **EEG Feature Size (Band)** | 105                                        |
 | **Output Feature Size**   | Combined EEG features for one word         |
 
----
+ 
 
 ### **2. Pre-Encoder**
 
@@ -61,7 +61,7 @@ The pre-encoder transforms EEG feature space into the embedding space required b
 | **Processing**                  | Sequential dependencies captured via Transformer    |
 | **Purpose**                     | Bridges the gap between EEG signals and language generation |
 
----
+ 
 
 ### **3. Pre-Trained Seq2Seq Model**
 
@@ -81,7 +81,7 @@ This component is responsible for generating the output sentence based on the pr
 | **Pre-Trained Encoder** | Encodes EEG-derived embeddings         | 1024             |
 | **Pre-Trained Decoder** | Generates natural language sentences   | 1024             |
 
----
+ 
 
 ## **Summary of Model Pipeline**
 
@@ -112,6 +112,46 @@ This section describes the contents, participants, experimental design, and prep
   - **Mean Age**: 34 years (SD = 8.3).  
   - **Gender**: 10 females.  
   - **Native Language**: English (participants from Australia, Canada, UK, USA, or South Africa).  
+
+#### **Participant Demographics**
+
+| **ID**   | **Age** | **Gender** |
+|----------|---------|------------|
+| YAC      | 32      | Female     |
+| YAG      | 47      | Female     |
+| YAK      | 31      | Female     |
+| YDG      | 51      | Male       |
+| YDR      | 25      | Male       |
+| YFR      | 27      | Male       |
+| YFS      | 39      | Male       |
+| YHS      | 31      | Male       |
+| YIS      | 52      | Male       |
+| YLS      | 34      | Female     |
+| YMD      | 31      | Female     |
+| YMS      | 36      | Female     |
+| YRH      | 28      | Female     |
+| YRP      | 23      | Female     |
+| YRK      | 34      | Male       |
+| YSD      | 34      | Male       |
+| YSL      | 32      | Female     |
+| YTL*     | 36      | Male       |
+
+| **Mean Age** | **Gender Distribution** |
+|--------------|-------------------------|
+| 34           | 44% Male                |
+
+ 
+
+#### **Reading Material Statistics**
+
+| **Metric**          | **NR**  | **TSR** |
+|---------------------|---------|---------|
+| **Sentences**       | 349     | 390     |
+| **Sentence Length** | Mean = 19.6 (SD = 8.8), Range = 5-53 | Mean = 21.3 (SD = 9.5), Range = 5-53 |
+| **Total Words**     | 6828    | 8310    |
+| **Word Types**      | 2412    | 2437    |
+| **Word Length**     | Mean = 4.9 (SD = 2.7), Range = 1-29  | Mean = 4.9 (SD = 2.7), Range = 1-21 |
+| **Flesch Score**    | 55.38   | 50.76   |
 
 
 ### **2. EEG Data Acquisition**
