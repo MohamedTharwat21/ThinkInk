@@ -22,18 +22,17 @@
 The model is designed to transform **word-level EEG features** , these features will be obtained after **Features Extraction Step** which is done by taking raw EEG recording signals then convert it to Preprocessed version, into coherent natural language sentences. It is composed of **three key components**, each playing a crucial role in the processing pipeline:
 
 ### Word-Level EEG Feature Construction
-  1-This stage concatenates the features of different frequency bands corresponding to a single word to form a unified word-level EEG feature.
-  2-Each band’s EEG features are of size 105, and the concatenation creates a comprehensive representation for each word.
+1-This stage concatenates the features of different frequency bands corresponding to a single word to form a unified word-level EEG feature.
+2-Each band’s EEG features are of size 105, and the concatenation creates a comprehensive representation for each word.
   
 ### Pre-Encoder
-The pre-encoder transforms the original EEG feature space into the embedding space required by the pre-trained Seq2Seq model.
- 
-  1.A non-linear transformation to map the concatenated features to a higher-dimensional space (size 840).
-  2.A Transformer encoder, which further processes the features to capture sequential dependencies and richer representations.
-  3.The pre-encoder bridges the gap between raw EEG signals and the format needed for language generation.
+The pre-encoder transforms the original EEG feature space into the embedding space required by the pre-trained Seq2Seq model. 
+1.A non-linear transformation to map the concatenated features to a higher-dimensional space (size 840).
+2.A Transformer encoder, which further processes the features to capture sequential dependencies and richer representations.
+3.The pre-encoder bridges the gap between raw EEG signals and the format needed for language generation.
 
 ### Pre-Trained Seq2Seq Model
-  1-The pre-trained Seq2Seq component is responsible for generating the output sentence. It consists of:
-  2-A pre-trained encoder, which processes the EEG-derived embeddings and encodes the input sequence.
-  3-A pre-trained decoder, which generates the natural language sentence from the encoded representation.
-  4-Both the encoder and decoder work with a feature size of 1024, ensuring high-quality semantic representation and decoding.
+1-The pre-trained Seq2Seq component is responsible for generating the output sentence. It consists of:
+2-A pre-trained encoder, which processes the EEG-derived embeddings and encodes the input sequence.
+3-A pre-trained decoder, which generates the natural language sentence from the encoded representation.
+4-Both the encoder and decoder work with a feature size of 1024, ensuring high-quality semantic representation and decoding.
