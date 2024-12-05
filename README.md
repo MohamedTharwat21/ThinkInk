@@ -52,6 +52,123 @@ The model is designed to transform **word-level EEG features** , these features 
 
 ## Data Collection
 
+### **ZuCo 2.0 Corpus: Data Collection and Processing**
+This section describes the contents, participants, experimental design, and preprocessing techniques used in the ZuCo 2.0 dataset.
+
+---
+
+### **1. Participants**
+
+### Overview
+- Total Participants: **19** (data from 1 participant discarded due to technical issues).  
+- Final Dataset: **18 participants**.  
+- Demographics:  
+  - **Mean Age**: 34 years (SD = 8.3).  
+  - **Gender**: 10 females.  
+  - **Native Language**: English (participants from Australia, Canada, UK, USA, or South Africa).  
+
+---
+
+### **2. EEG Data Acquisition**
+
+### Equipment and Setup
+- **EEG System**: 128-channel Geodesic Hydrocel system (Electrical Geodesics).  
+- **Sampling Rate**: 500 Hz.  
+- **Bandpass Filter**: 0.1 to 100 Hz.  
+- **Reference Electrode**: Set at electrode **Cz**.  
+- **Electrode Setup**:  
+  - Head circumference measured to select the appropriate EEG net size.  
+  - Impedance of each electrode kept below **40 kOhm** to ensure proper contact.  
+  - Impedance levels checked every 30 minutes after every 50 sentences.  
+
+| **Specification**      | **Details**                   |
+|-------------------------|-------------------------------|
+| **System**             | Geodesic Hydrocel (128-channel) |
+| **Sampling Rate**       | 500 Hz                       |
+| **Bandpass**            | 0.1–100 Hz                   |
+| **Reference Electrode** | Cz                           |
+| **Electrode Impedance** | ≤ 40 kOhm                    |
+
+
+### **3. Data Preprocessing and Extraction**
+
+### Raw and Preprocessed Data
+- **Tools Used**:  
+  - Preprocessing performed using **Automagic (version 1.4.6)** for automatic EEG data cleaning and validation.  
+  - **MARA (Multiple Artifact Rejection Algorithm)**: A supervised machine learning algorithm used for automatic artifact rejection.  
+
+### EEG Channel Selection
+- **Channels Used**:  
+  - **105 EEG channels** from the scalp recordings.  
+  - **9 EOG channels** for artifact removal.  
+  - **14 channels** (mainly on the neck and face) were discarded.  
+
+| **Channels**             | **Count**           | **Purpose**              |
+|--------------------------|---------------------|--------------------------|
+| **EEG Channels**         | 105                 | Scalp recordings         |
+| **EOG Channels**         | 9                   | Artifact removal         |
+| **Discarded Channels**   | 14                  | Neck and face channels   |
+
+### Artifact Rejection
+- **Artifacts Addressed**: Eye movements and muscle noise.  
+- **Artifact Rejection Criterion**: Trials with transient noise above **90 µV** were excluded.
+
+
+### **4. Synchronization and Feature Extraction**
+
+### Synchronization
+- EEG signals synchronized with eye-tracking data to enable analyses time-locked to fixation onsets.  
+
+### Oscillatory Power Measures
+- **Frequency Bands**:  
+  - Theta1 (4–6 Hz), Theta2 (6.5–8 Hz).  
+  - Alpha1 (8.5–10 Hz), Alpha2 (10.5–13 Hz).  
+  - Beta1 (13.5–18 Hz), Beta2 (18.5–30 Hz).  
+  - Gamma1 (30.5–40 Hz), Gamma2 (40–49.5 Hz).  
+- **Processing Steps**:  
+  - Bandpass filtering for each frequency band.  
+  - **Hilbert Transformation** applied to preserve temporal amplitude information.  
+
+| **Frequency Band** | **Range (Hz)** |
+|--------------------|----------------|
+| **Theta1**         | 4–6            |
+| **Theta2**         | 6.5–8          |
+| **Alpha1**         | 8.5–10         |
+| **Alpha2**         | 10.5–13        |
+| **Beta1**          | 13.5–18        |
+| **Beta2**          | 18.5–30        |
+| **Gamma1**         | 30.5–40        |
+| **Gamma2**         | 40–49.5        |
+
+### Sentence-Level EEG Features
+- **Power Calculations**:  
+  - Power computed for each frequency band.  
+  - Difference in power spectra between frontal left and right homologue electrodes.  
+- **Eye-Tracking Features**: Corresponding EEG features computed for each fixation.  
+
+| **Feature**                 | **Description**                                |
+|-----------------------------|-----------------------------------------------|
+| **Frequency Band Power**    | Power calculated for each band.               |
+| **Electrode Differences**   | Power difference between left/right pairs.    |
+| **Artifact Rejection**      | Channels excluded for noise > 90 µV.          |
+
+
+### **5. Summary**
+- The data collection process ensures high-quality EEG recordings synchronized with eye-tracking data.  
+- Advanced preprocessing techniques, such as MARA and Hilbert transformations, enhance the usability of the dataset for downstream analyses.  
+- The dataset captures meaningful EEG signals corresponding to natural reading tasks, enabling in-depth exploration of brain activity and behavior.
+
+
+
+
+
+
+
+
+
+
+
+
 ![image](https://github.com/user-attachments/assets/942f50da-4890-410b-96e2-7f4cfe8c73b1)
 
 **Figure 5**: EEG Brain Signals.  
