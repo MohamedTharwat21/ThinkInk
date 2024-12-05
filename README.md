@@ -31,7 +31,7 @@ The model is designed to transform **word-level EEG features** , these features 
     
 ### Pre-Encoder
 
-The pre-encoder transforms the original EEG feature space into the embedding space required by the pre-trained Seq2Seq model. 
+-The pre-encoder transforms the original EEG feature space into the embedding space required by the pre-trained Seq2Seq model. 
 
    -A non-linear transformation to map the concatenated features to a higher-dimensional space (size 840).
    
@@ -41,7 +41,7 @@ The pre-encoder transforms the original EEG feature space into the embedding spa
 
 
 ### Pre-Trained Seq2Seq Model
-
+-
    -The pre-trained Seq2Seq component is responsible for generating the output sentence. It consists of:
    
    -A pre-trained encoder, which processes the EEG-derived embeddings and encodes the input sequence.
