@@ -107,10 +107,10 @@ The EEG signals were recorded while participants read text from two primary sour
 
 |                  | **Training** | **Validation** | **Testing** | 
 |------------------|--------------|----------------|-------------|
-| **Pairs**        | 14,567       | 1,811          | 1,821       |
-| **Unique Sentences** | 1,061       | 173            | 146         |
-| **Subjects**     | 30           | 30             | 30          |
-| **Avg. Words**   | 19.89        | 18.80          | 19.23       |
+| **# Pairs**        | 14,567       | 1,811          | 1,821       |
+| **# Unique Sentences** | 1,061       | 173            | 146         |
+| **# Subjects**     | 30           | 30             | 30          |
+| **# Avg. Words**   | 19.89        | 18.80          | 19.23       |
 
  
 Statistics for the ZuCo benchmark. **“# pairs”** means the number of EEG-text pairs, **“# unique sent”** represents the number of unique sentences, **“# subject”** denotes the number of subjects and **“avg.words”** means the average number of words of sentences.
