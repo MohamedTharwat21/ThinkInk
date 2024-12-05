@@ -23,14 +23,12 @@ The model is designed to transform **word-level EEG features** , these features 
 
 
 ### Word-Level EEG Feature Construction
-
    This stage concatenates the features of different frequency bands corresponding to a single word to form a unified word-level EEG feature.
    
    Each band’s EEG features are of size 105, and the concatenation creates a comprehensive representation for each word.
 
     
 ### Pre-Encoder
-
    The pre-encoder transforms the original EEG feature space into the embedding space required by the pre-trained Seq2Seq model. 
 
    A non-linear transformation to map the concatenated features to a higher-dimensional space (size 840).
@@ -41,13 +39,10 @@ The model is designed to transform **word-level EEG features** , these features 
 
 
 ### Pre-Trained Seq2Seq Model
-
-    The pre-trained Seq2Seq component is responsible for generating the output sentence. It consists of:
+#### The pre-trained Seq2Seq component is responsible for generating the output sentence. It consists of:
    
     A pre-trained encoder, which processes the EEG-derived embeddings and encodes the input sequence.
    
     A pre-trained decoder, which generates the natural language sentence from the encoded representation.
     
     Both the encoder and decoder work with a feature size of 1024, ensuring high-quality semantic representation and decoding.
-
-   
