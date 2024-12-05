@@ -101,6 +101,9 @@ This modular pipeline ensures that raw EEG signals are effectively translated in
 ### **ZuCo 2.0 Corpus: Data Collection and Processing**
 This section describes the contents, participants, experimental design, and preprocessing techniques used in the ZuCo 2.0 dataset.
 
+![image](https://github.com/user-attachments/assets/942f50da-4890-410b-96e2-7f4cfe8c73b1)
+
+**Figure 5**: EEG Brain Signals.  
 
 ### **1. Participants**
 
@@ -263,9 +266,7 @@ This section describes the contents, participants, experimental design, and prep
 - The dataset captures meaningful EEG signals corresponding to natural reading tasks, enabling in-depth exploration of brain activity and behavior.
 
 
-![image](https://github.com/user-attachments/assets/942f50da-4890-410b-96e2-7f4cfe8c73b1)
 
-**Figure 5**: EEG Brain Signals.  
 
 
 ## Dataset
