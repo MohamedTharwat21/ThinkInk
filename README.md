@@ -20,7 +20,12 @@ The **Electroencephalography-to-Text (EEG-to-Text) generation** project lies at 
 - **Purpose**: Provides life-changing solutions for individuals who cannot speak or write due to conditions like ALS, paralysis, or severe motor impairments.  
 - **Impact**: By decoding their thoughts into text, the technology restores independence, enhances communication, and improves the quality of life.
 
- 
+
+
+![image](https://github.com/user-attachments/assets/bcebd498-c048-4ea4-807c-58151f577f07)
+
+**Figure 1** : Decoding brain signals of a disabled woman.
+
 
 ## **Model Overview**
 
