@@ -14,3 +14,7 @@
 
 
 ## Project Overview
+
+**Electroencephalography-to-Text (EEG-to-Text)** generation is an emerging field at the intersection of neuroscience, artificial intelligence, and human-computer interaction. This groundbreaking technology focuses on transforming brain activity, captured through EEG signals, directly into natural text. It represents a pivotal innovation in Brain-Computer Interfaces **(BCIs)**, opening doors to novel applications that enhance communication, accessibility, and productivity for individuals worldwide.
+
+Despite its immense promise, **EEG-to-Text generation** is a complex and challenging task. A fundamental difficulty lies in bridging the gap between subject-dependent EEG representations, which vary significantly across individuals, and semantic-dependent text representations, which require consistent and coherent linguistic structures. Successfully addressing this discrepancy requires advanced modeling techniques and interdisciplinary expertise, making this an exciting frontier for research and innovation.
