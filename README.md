@@ -4,7 +4,6 @@
 ## Contents
 0. [Project Overview](#Project-Overview)
 0. [Model](#model)
-0. [Baselines and Experiments](#baselines-and-experiments)  
 0. [Dataset](#dataset)
 0. [Installation](#installation)  
 0. [Key Insights](#key-insights)
@@ -17,6 +16,7 @@
 **Electroencephalography-to-Text (EEG-to-Text) generation** is an emerging field at the intersection of neuroscience, artificial intelligence, and human-computer interaction. This groundbreaking technology focuses on transforming brain activity, captured through EEG signals, directly into natural text. It represents a pivotal innovation in Brain-Computer Interfaces **(BCIs)**, opening doors to novel applications that enhance communication, accessibility, and productivity for individuals worldwide.
 
 **EEG-to-Text technology** offers a life-changing solution for individuals who cannot speak or write due to conditions like ALS, paralysis, or severe motor impairments. **By decoding their thoughts into text** , this project provides a pathway for communication and interaction, restoring independence and quality of life.
+
 
 ## Model
 The model is designed to transform **word-level EEG features** , these features will be obtained after **Features Extraction Step** which is done by taking raw EEG recording signals then convert it to Preprocessed version, into coherent natural language sentences. It is composed of **three key components**, each playing a crucial role in the processing pipeline:
@@ -45,3 +45,12 @@ The model is designed to transform **word-level EEG features** , these features 
    A pre-trained decoder, which generates the natural language sentence from the encoded representation.
     
    Both the encoder and decoder work with a feature size of 1024, ensuring high-quality semantic representation and decoding.
+
+
+
+
+## Dataset
+
+![image](https://github.com/user-attachments/assets/942f50da-4890-410b-96e2-7f4cfe8c73b1)
+
+**Figure 5**: EEG Brain Signals.  
