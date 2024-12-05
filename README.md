@@ -1,5 +1,5 @@
 # ThinkInk
-## This project aims to develop a groundbreaking system that can decode brain activity, specifically EEG signals, into text. By harnessing the power of machine learning, we strive to bridge the gap between thought and expression, enabling silent communication and empowering individuals with speech impairments.
+## This project aims to develop a system that can decode brain activity , specifically EEG signals, into text. By harnessing the power of deep learning and NLP, we seek to bridge the gap between thought and its expression in meaningful words , enabling silent communication and empowering individuals with speech impairments.
 
 ## Contents
 0. [Project Overview](#Project-Overview)
