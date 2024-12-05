@@ -40,7 +40,6 @@ The model is designed to transform **word-level EEG features** , these features 
 
 ### Pre-Trained Seq2Seq Model
 #### The pre-trained Seq2Seq component is responsible for generating the output sentence. It consists of:
-   
     A pre-trained encoder, which processes the EEG-derived embeddings and encodes the input sequence.
    
     A pre-trained decoder, which generates the natural language sentence from the encoded representation.
