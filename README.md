@@ -6,10 +6,6 @@
 0. [Model](#model)
 0. [Data Collection](#data-collection)
 0. [Dataset](#dataset)
-0. [Installation](#installation)  
-0. [Key Insights](#key-insights)
-0. [Results](#results) 
-0. [Future Improvements](#Future-Improvements)
 
 
 ## **Project Overview**
