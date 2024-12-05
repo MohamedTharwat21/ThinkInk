@@ -2,7 +2,7 @@
 ## This project aims to develop a groundbreaking system that can decode brain activity, specifically EEG signals, into text. By harnessing the power of machine learning, we strive to bridge the gap between thought and expression, enabling silent communication and empowering individuals with speech impairments.
 
 ## Contents
-0. [Project Overview](#Project Overview)
+0. [Project Overview](#Project-Overview)
 0. [Abstract](#abstract)
 0. [Model](#model)
 0. [Baselines and Experiments](#baselines-and-experiments)  
