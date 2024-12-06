@@ -21,6 +21,7 @@ The **Electroencephalography-to-Text (EEG-to-Text) generation** project lies at 
 ![image](https://github.com/user-attachments/assets/bcebd498-c048-4ea4-807c-58151f577f07)
 
 **Figure 1** : Decoding brain signals of a disabled woman.
+
 **Figure src** : https://spectrum.ieee.org/brain-computer-interface-speech
 
 ## **Model Overview**
