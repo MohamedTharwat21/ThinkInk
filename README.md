@@ -3,11 +3,13 @@
 
 ## Contents
 0. [Project Overview](#Project-Overview)
+0. [Introduction](#Introduction)
 0. [Model](#model)
 0. [Data Collection](#data-collection)
 0. [Dataset](#dataset)
 0. [Task Formulation](#Task-Formulation)
 
+ 
 ## **Project Overview**
 
 The **Electroencephalography-to-Text (EEG-to-Text) generation** project lies at the intersection of neuroscience, artificial intelligence, and human-computer interaction. This groundbreaking technology focuses on translating brain activity, captured through EEG signals, directly into natural text. It represents a pivotal innovation in **Brain-Computer Interfaces (BCIs)**, enabling novel applications that enhance communication, accessibility, and productivity.
@@ -23,6 +25,89 @@ The **Electroencephalography-to-Text (EEG-to-Text) generation** project lies at 
 **Figure 1** : Decoding brain signals of a disabled woman.
 
 **Figure src** : https://spectrum.ieee.org/brain-computer-interface-speech
+
+
+## Introduction
+
+### Motivation
+
+Neurological conditions, such as spinal cord injuries and neuromuscular disorders, can cause individuals to lose their ability to communicate despite retaining intact language and cognitive abilities. This inability to express oneself can drastically diminish their quality of life. Brain-Computer Interfaces (BCIs) offer a potential solution by decoding neural activity into natural language, referred to as **Brain-to-Text**. This approach has the potential to restore communication and significantly improve the lives of affected individuals.
+
+| **Challenges** | **Details** |
+|-----------------|-------------|
+| **Subject-Dependent EEG Representation** | EEG signals tend to cluster based on individual subjects rather than sentence stimuli. This leads to similar cognitive patterns for different sentences within the same subject. |
+| **Semantic-Dependent Text Representation** | Different subjects exhibit varied responses to the same sentence stimulus, making it challenging to generalize EEG signals across subjects. |
+| **Many-to-One Generation Problem** | Multiple EEG signals often correspond to the same sentence, creating challenges in training sequence-to-sequence models due to data inconsistency. |
+| **Limited Cross-Subject Generalizability** | Subject-dependent EEG signals are difficult to transfer to unseen subjects, significantly degrading model performance when exposed to new data. |
+
+
+### Proposed Solution
+To address these challenges, the study introduces the **Curriculum Semantic-Aware Contrastive Learning (C-SCL)** strategy. This method aims to re-calibrate subject-dependent EEG representations into semantic-dependent EEG representations, making them more suitable for EEG-to-Text generation tasks.
+
+#### Key Features of the Proposed Solution
+
+
+| **Component**                          | **Description**                                                                                                                                                  |
+|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Semantic-Aware Contrastive Learning (SCL)** | Aims to maximize similarities of EEG signals for the same sentence stimulus (positive pairs) across subjects while minimizing similarities for different stimuli (negative pairs). |
+| **Hard Contrastive Pair Construction** | Constructs contrastive pairs of varying difficulty by precomputing the similarity between EEG signals. Hard positive pairs have low similarity initially, while hard negative pairs have high similarity. |
+| **Curriculum Learning**                | Introduces a progressive learning process that begins with easy pairs and transitions to harder pairs, enabling the model to gradually learn more complex patterns. |
+
+
+
+### Methodology Overview
+
+| **Step**                               | **Details**                                                                                                                                               |
+|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Preprocessing EEG Signals**          | EEG signals are extracted and represented as feature vectors for each word-level stimulus.                                                                |
+| **Pair Construction**                  | Contrastive pairs (positive and negative) are created based on sentence similarity and EEG signal similarity.                                              |
+| **Semantic-Aware Contrastive Learning** | The model aligns similar representations for identical sentences and separates representations for different sentences.                                     |
+| **Curriculum Learning Integration**    | Difficulty of contrastive pairs is introduced progressively, improving the learning process by starting with simpler tasks and moving to more challenging ones. |
+
+ 
+
+### Experimental Validation
+The proposed approach was evaluated using the **ZuCo Benchmark** dataset, which is widely used for EEG-to-Text generation tasks. The performance was assessed across various metrics, scenarios, and experimental setups.
+
+#### Key Findings
+
+| **Metric/Scenario**        | **Details**                                                                                                 |
+|-----------------------------|------------------------------------------------------------------------------------------------------------|
+| **Improved Generation Metrics** | The method demonstrated significant improvements in metrics like BLEU, ROUGE, and CIDEr across different models and architectures. |
+| **Single-Subject Setting**  | Outperformed existing methods even when training and testing on data from a single subject.                |
+| **Low-Resource Setting**    | Demonstrated effectiveness in scenarios with limited training data, making it suitable for practical applications. |
+| **Zero-Shot Setting**       | Showed robust generalizability by accurately predicting sentences for completely unseen subjects and stimuli. |
+
+ 
+
+### Contributions
+
+The study makes the following key contributions:
+
+1. **Addressing Discrepancy:**  
+   The study tackles the challenge of aligning subject-dependent EEG representations with semantic-dependent text representations, a significant obstacle in EEG-to-Text tasks.
+
+2. **Novel Curriculum Learning Strategy:**  
+   Introduced the **Curriculum Semantic-Aware Contrastive Learning (C-SCL)** framework, which effectively transforms EEG signals into representations aligned with the intended semantic context.
+
+3. **Comprehensive Evaluation:**  
+   Conducted extensive experiments on the **ZuCo Benchmark** to validate the proposed method's effectiveness, robustness, and generalizability across diverse scenarios.
+
+4. **Generalization and Scalability:**  
+   Demonstrated the method's ability to generalize to unseen subjects, stimuli, and low-resource settings, highlighting its potential for real-world applications.
+
+
+
+### Summary Table
+
+| **Aspect**                | **Details**                                                                                 |
+|----------------------------|---------------------------------------------------------------------------------------------|
+| **Problem**               | Translating subject-dependent EEG representations to semantic-dependent text representations. |
+| **Proposed Solution**     | Curriculum Semantic-Aware Contrastive Learning (C-SCL).                                      |
+| **Key Components**        | Contrastive learning with semantic awareness and curriculum-based progressive learning.       |
+| **Evaluation**            | Experiments on ZuCo benchmark, showing significant improvements in generalization, performance, and resource efficiency. |
+| **Real-World Applicability** | Demonstrated suitability for real-world scenarios, including low-resource and zero-shot settings.                       |
+
 
 ## **Model Overview**
 
