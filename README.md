@@ -109,7 +109,7 @@ The study makes the following key contributions:
 | **Real-World Applicability** | Demonstrated suitability for real-world scenarios, including low-resource and zero-shot settings.                       |
 
 
-## **Model Overview**
+## **Model**
 
 The EEG-to-Text model is designed to transform **word-level EEG features** into coherent, natural-language sentences. These features are derived after the **Feature Extraction Step**, where raw EEG signals are preprocessed and converted into usable data.  
 
