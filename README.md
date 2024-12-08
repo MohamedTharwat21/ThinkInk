@@ -345,25 +345,10 @@ This dataset serves as the foundation for training and validating the BrainTrans
 
 
 ## Task Formulation
+![image](https://github.com/user-attachments/assets/61d294bd-3e3b-4d81-b792-ac55485f0448)
+![image](https://github.com/user-attachments/assets/fb84eb44-6250-44bb-9cd3-8e6d26d8f297)
+![image](https://github.com/user-attachments/assets/92f0b4ce-ebde-446d-a376-3948582c6c9b)
 
-### Problem Overview
-The EEG-to-Text generation task aims to produce a sentence \( S \) from a sequence of EEG features \( E \) using a sequence-to-sequence model with parameters \( \theta \). This task is structured as follows:
-
-### Input and Output
-- **Input:** EEG feature sequence \( E = \{e_1, e_2, ..., e_{|E|}\} \), where each feature \( e \in \mathbb{R}^n \) is a word-level EEG feature vector.
-- **Output:** A text sentence \( S = \{s_1, s_2, ..., s_{|S|}\} \), where each \( s_i \) is a token in the sentence.
-
-### Model Parameters
-- \( \theta \): The parameters of the sequence-to-sequence model used to map EEG features to a sentence.
-
-### Subjects and Dataset Partitioning
-- Each EEG feature sequence \( E \) is associated with a subject \( p_i \), and the set of all subjects is represented as \( P \).
-- During **training**, EEG-Text pairs from various subjects in \( P \) are used to train the model.
-- During **testing**, the sentences are completely unseen, ensuring the test set also adheres to the same subject set \( P \).
-
-### Key Constraints
-- The train, validation, and test sets maintain the same set of subjects \( P \), ensuring consistency and generalization within the dataset.
-
-This formulation frames the task as a sequence-to-sequence learning problem, leveraging EEG data to generate corresponding text sentences.
+ 
 
 
