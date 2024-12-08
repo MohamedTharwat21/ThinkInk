@@ -345,9 +345,10 @@ This dataset serves as the foundation for training and validating the BrainTrans
 
 
 ## Task Formulation
-![image](https://github.com/user-attachments/assets/61d294bd-3e3b-4d81-b792-ac55485f0448)
-![image](https://github.com/user-attachments/assets/fb84eb44-6250-44bb-9cd3-8e6d26d8f297)
-![image](https://github.com/user-attachments/assets/92f0b4ce-ebde-446d-a376-3948582c6c9b)
+
+![image](https://github.com/user-attachments/assets/2a7790ef-d341-499f-886e-5a8b76b54df1)
+![image](https://github.com/user-attachments/assets/a895be1b-1ac8-4255-bdbe-a53ed7a9dd2c)
+
 
  
 
