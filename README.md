@@ -6,7 +6,7 @@
 0. [Model](#model)
 0. [Data Collection](#data-collection)
 0. [Dataset](#dataset)
-
+0. [Task Formulation](#Task-Formulation)
 
 ## **Project Overview**
 
@@ -341,4 +341,14 @@ Statistics for the ZuCo benchmark. **“# pairs”** means the number of EEG-tex
 - Wang, S., & Ji, H. (2022). *Unified Representation Learning for EEG-to-Text Tasks.*
 
 This dataset serves as the foundation for training and validating the BrainTranslator model, enabling the transformation of EEG signals into meaningful text representations.
+
+
+
+## Task Formulation
+
+- The task involves generating a sentence \( S \) from a sequence of word-level EEG features \( E \).
+   
+- Each feature vector \( e_i \in E \) represents a word-level EEG embedding of size \( n \), and \( S \) consists of sentence tokens \( [s_1, s_2, \ldots, s_m] \).
+- 
+- During training, EEG-text pairs are collected from a diverse set of subjects \( P \). The model is trained to generalize across subjects, ensuring unseen sentences during the test phase while maintaining the same subject set in the train, validation, and test splits.
 
