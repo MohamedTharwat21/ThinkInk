@@ -45,47 +45,7 @@ Neurological conditions, such as spinal cord injuries and neuromuscular disorder
 To address these challenges,we aim to re-calibrate subject-dependent EEG representations into semantic-dependent EEG representations, making them more suitable for EEG-to-Text generation tasks.
 
 
-### Experimental Validation
-The proposed approach was evaluated using the **ZuCo Benchmark** dataset, which is widely used for EEG-to-Text generation tasks. The performance was assessed across various metrics, scenarios, and experimental setups.
 
-#### Key Findings
-
-| **Metric/Scenario**        | **Details**                                                                                                 |
-|-----------------------------|------------------------------------------------------------------------------------------------------------|
-| **Improved Generation Metrics** | The method demonstrated significant improvements in metrics like BLEU, ROUGE, and CIDEr across different models and architectures. |
-| **Single-Subject Setting**  | Outperformed existing methods even when training and testing on data from a single subject.                |
-| **Low-Resource Setting**    | Demonstrated effectiveness in scenarios with limited training data, making it suitable for practical applications. |
-| **Zero-Shot Setting**       | Showed robust generalizability by accurately predicting sentences for completely unseen subjects and stimuli. |
-
- 
-
-### Contributions
-
-The study makes the following key contributions:
-
-1. **Addressing Discrepancy:**  
-   The study tackles the challenge of aligning subject-dependent EEG representations with semantic-dependent text representations, a significant obstacle in EEG-to-Text tasks.
-
-2. **Novel Curriculum Learning Strategy:**  
-   Introduced the **Curriculum Semantic-Aware Contrastive Learning (C-SCL)** framework, which effectively transforms EEG signals into representations aligned with the intended semantic context.
-
-3. **Comprehensive Evaluation:**  
-   Conducted extensive experiments on the **ZuCo Benchmark** to validate the proposed method's effectiveness, robustness, and generalizability across diverse scenarios.
-
-4. **Generalization and Scalability:**  
-   Demonstrated the method's ability to generalize to unseen subjects, stimuli, and low-resource settings, highlighting its potential for real-world applications.
-
-
-
-### Summary Table
-
-| **Aspect**                | **Details**                                                                                 |
-|----------------------------|---------------------------------------------------------------------------------------------|
-| **Problem**               | Translating subject-dependent EEG representations to semantic-dependent text representations. |
-| **Proposed Solution**     | Curriculum Semantic-Aware Contrastive Learning (C-SCL).                                      |
-| **Key Components**        | Contrastive learning with semantic awareness and curriculum-based progressive learning.       |
-| **Evaluation**            | Experiments on ZuCo benchmark, showing significant improvements in generalization, performance, and resource efficiency. |
-| **Real-World Applicability** | Demonstrated suitability for real-world scenarios, including low-resource and zero-shot settings.                       |
 
 
 ## **Model**
