@@ -44,27 +44,6 @@ Neurological conditions, such as spinal cord injuries and neuromuscular disorder
 ### Proposed Solution
 To address these challenges,we aim to re-calibrate subject-dependent EEG representations into semantic-dependent EEG representations, making them more suitable for EEG-to-Text generation tasks.
 
-#### Key Features of the Proposed Solution
-
-
-| **Component**                          | **Description**                                                                                                                                                  |
-|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Semantic-Aware Contrastive Learning (SCL)** | Aims to maximize similarities of EEG signals for the same sentence stimulus (positive pairs) across subjects while minimizing similarities for different stimuli (negative pairs). |
-| **Hard Contrastive Pair Construction** | Constructs contrastive pairs of varying difficulty by precomputing the similarity between EEG signals. Hard positive pairs have low similarity initially, while hard negative pairs have high similarity. |
-| **Curriculum Learning**                | Introduces a progressive learning process that begins with easy pairs and transitions to harder pairs, enabling the model to gradually learn more complex patterns. |
-
-
-
-### Methodology Overview
-
-| **Step**                               | **Details**                                                                                                                                               |
-|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Preprocessing EEG Signals**          | EEG signals are extracted and represented as feature vectors for each word-level stimulus.                                                                |
-| **Pair Construction**                  | Contrastive pairs (positive and negative) are created based on sentence similarity and EEG signal similarity.                                              |
-| **Semantic-Aware Contrastive Learning** | The model aligns similar representations for identical sentences and separates representations for different sentences.                                     |
-| **Curriculum Learning Integration**    | Difficulty of contrastive pairs is introduced progressively, improving the learning process by starting with simpler tasks and moving to more challenging ones. |
-
- 
 
 ### Experimental Validation
 The proposed approach was evaluated using the **ZuCo Benchmark** dataset, which is widely used for EEG-to-Text generation tasks. The performance was assessed across various metrics, scenarios, and experimental setups.
