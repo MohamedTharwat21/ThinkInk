@@ -42,7 +42,7 @@ Neurological conditions, such as spinal cord injuries and neuromuscular disorder
 
 
 ### Proposed Solution
-To address these challenges, the study introduces the **Curriculum Semantic-Aware Contrastive Learning (C-SCL)** strategy. This method aims to re-calibrate subject-dependent EEG representations into semantic-dependent EEG representations, making them more suitable for EEG-to-Text generation tasks.
+To address these challenges,we aim to re-calibrate subject-dependent EEG representations into semantic-dependent EEG representations, making them more suitable for EEG-to-Text generation tasks.
 
 #### Key Features of the Proposed Solution
 
