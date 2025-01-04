@@ -370,8 +370,24 @@ This dataset serves as the foundation for training and validating the BrainTrans
 
 ## Task Formulation
 
-![image](https://github.com/user-attachments/assets/2a7790ef-d341-499f-886e-5a8b76b54df1)
-![image](https://github.com/user-attachments/assets/a895be1b-1ac8-4255-bdbe-a53ed7a9dd2c)
+**1. Input and Output:**
+
+* The input is a sequence of EEG features denoted as E = {e1, e2, ..., eB}, where each e ∈ R^n is a word-level EEG feature vector.
+* The output is a sentence S = {s1, s2, ..., sS}, where s_i represents tokens forming the sentence.
+
+**2. Model Parameters:**
+
+* θ represents the parameters of the sequence-to-sequence model used for generating the text sentence from the EEG features.
+
+**3. Subjects and Dataset Partitioning:**
+
+* Each EEG feature sequence E corresponds to a subject p_i, with all subjects forming a set P.
+* During training, EEG-text pairs are used from various subjects in the set P.
+* During testing, the sentences are completely unseen, ensuring that the test set also adheres to the same set of subjects P, meaning the model generalizes within the subjects present in the dataset.
+
+**4. Key Constraints:**
+
+* The train, validation, and test sets maintain the same set of subjects P, ensuring consistency in the distribution.
 
 
  
