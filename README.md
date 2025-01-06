@@ -6,6 +6,7 @@
 0. [Introduction](#Introduction)
 0. [Model](#model)
 0. [Data Collection](#data-collection)
+0. [Normal Reading NR & Task Specific Annotation Reading TSR](#Normal-Reading-NR-&-Task-Specific-Annotation-Reading-TSR)
 0. [Dataset](#dataset)
 0. [Task Formulation](#Task-Formulation)
 
@@ -296,13 +297,87 @@ This section describes the contents, participants, experimental design, and prep
 - The dataset captures meaningful EEG signals corresponding to natural reading tasks, enabling in-depth exploration of brain activity and behavior.
 
 
-
-
-
 ## Dataset
 
 **Dataset: ZuCo Benchmark**
 The dataset used for this project is derived from the **ZuCo Benchmark**, which combines data from two EEG datasets: **ZuCo [Hollenstein et al., 2018]** and **ZuCo 2.0 [Hollenstein et al., 2020]**. This benchmark provides a rich corpus of EEG signals and eye-tracking data collected during natural reading activities, making it highly suitable for EEG-to-Text research.
+
+## A New Dataset: ZuCo 2.0 for Studying Natural Reading and Annotation Processes
+A new dataset, ZuCo 2.0, was recorded and preprocessed to investigate the neural correlates of natural reading and annotation tasks using simultaneous eye-tracking and electroencephalography (EEG). This corpus provides gaze and brain activity data for 739 English sentences. 
+
+* **349 sentences** were presented in a **normal reading paradigm**, where participants read naturally without any specific instructions beyond comprehension.
+* **390 sentences** were presented in a **task-specific paradigm**, where participants actively searched for a specific semantic relation type within the sentences, acting as a linguistic annotation task.
+
+ZuCo 2.0 complements the existing ZuCo 1.0 dataset by offering data specifically designed to analyze the cognitive processing differences between natural reading and annotation tasks. The data is freely available for download here: https://osf.io/2urht/.
+
+
+## Normal Reading NR& Task Specific Annotation Reading TSR
+
+### Normal Reading (NR) vs. Task-Specific Reading (TSR)
+
+The key difference between normal reading (NR) and task-specific reading (TSR) lies in the purpose and focus of the reading task:
+
+**Normal Reading (NR):**
+
+* **Objective:** Participants read the sentences naturally, focusing on general comprehension without any specific task.
+* **Instructions:** No specific instructions other than to read and understand the text.
+* **Example (Figure 2, left):** "He served in the United States Army in World War II, then got a law degree from Tulane University."
+* **Control Condition:** Some sentences (12%) are followed by simple comprehension questions with multiple-choice answers, such as: "Which university did he get his degree from?"
+* **Cognitive Load:** Reflects natural reading processes and comprehension without added cognitive demands like searching for specific information.
+
+**Task-Specific Reading (TSR):**
+
+* **Objective:** Participants search for a specific relation (e.g., whether a sentence contains a certain type of information or relation).
+* **Instructions:** Participants actively annotate the text by deciding whether the relation is present in the sentence.
+* **Example (Figure 2, right):** "After this initial success, Ford left Edison Illuminating and, with other investors, formed the Detroit Automobile Company." Participants answer: "Does this sentence contain the founder relation?" (Yes/No).
+* **Control Condition:** A minority of sentences (17%) do not include the relation, serving as a control to ensure participants are not biased towards always finding the relation.
+* **Cognitive Load:** Higher cognitive load due to the task of actively searching and annotating, rather than passively reading for comprehension.
+
+**Summary of Differences:**
+
+| Feature        | Normal Reading (NR) | Task-Specific Reading (TSR) |
+|----------------|----------------------|----------------------------|
+| Purpose        | Natural comprehension | Searching for specific relations |
+| Focus          | General understanding | Task-specific annotation |
+| Cognitive Effort | Low to moderate     | High (due to active searching) |
+| Example Interaction | Multiple-choice questions (12% of cases) | Yes/No relation-based annotation |
+
+**In summary, NR simulates everyday reading with occasional comprehension checks, while TSR involves actively searching for a specific piece of information, requiring more focused attention and effort.**
+
+**Examples of Normal Reading (NR) vs. Task-Specific Reading (TSR):**
+
+1. **Normal Reading (NR):**
+   * **Task:** Participants read sentences naturally, focusing on comprehension without any specific task.
+   * **Example Sentence (Displayed on Screen):** "Albert Einstein developed the theory of relativity, which revolutionized modern physics."
+   * **Follow-up Comprehension Question (Control Condition):** "Who developed the theory of relativity?" 
+      [1] Isaac Newton
+      [2] Albert Einstein
+      [3] Nikola Tesla
+
+2. **Task-Specific Reading (TSR):**
+   * **Task:** Participants actively search for a specific type of relation in the sentence, e.g., a "scientist-invention" relation.
+   * **Example Sentence (Displayed on Screen):** "Marie Curie discovered radium and was awarded two Nobel Prizes for her contributions to science."
+   * **Follow-up Question (Annotation Task):** "Does this sentence contain a scientist-invention relation?" 
+      [1] Yes
+      [2] No
+
+**Key Example Comparisons:**
+
+| Scenario | Normal Reading (NR)                                    | Task-Specific Reading (TSR)                               |
+|----------|--------------------------------------------------------|----------------------------------------------------------|
+| Sentence Shown | "Barack Obama served as the 44th President of the United States." | "Thomas Edison invented the light bulb in the 19th century." |
+| Follow-up Question | "Who was the 44th President?"                     | "Does this sentence contain the inventor relation?"        |
+| Answer Options | [1] George Bush, [2] Barack Obama, [3] Bill Clinton | [1] Yes, [2] No                                          |
+
+**Example with Figure 2 Sentences:**
+
+| Feature | Normal Reading Example                                     | Task-Specific Reading Example                               |
+|---------|--------------------------------------------------------|----------------------------------------------------------|
+| Reading Task | "He served in the United States Army in World War II, then got a law degree from Tulane University." | "After this initial success, Ford left Edison Illuminating and, with other investors, formed the Detroit Automobile Company." |
+| Control/Task | "Which university did he get his degree from?"        | "Does this sentence contain the founder relation?"        |
+| Answer Options | [1] Austin University, [2] Tulane University, [3] Louisiana State University | [1] Yes, [2] No                                          |
+
+In NR, participants comprehend general content. In TSR, participants evaluate sentences for a specific task or relation.
 
 
 
