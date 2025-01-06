@@ -6,7 +6,7 @@
 0. [Introduction](#Introduction)
 0. [Model](#model)
 0. [Data Collection](#data-collection)
-0. [Normal Reading (NR) vs. Task-Specific Reading (TSR)](#Normal-Reading-(NR)-vs.-Task-Specific-Reading-(TSR))
+0. [Normal Reading (NR) vs. Task-Specific Reading (TSR)](#normal-reading-nr-vs-task-specific-reading-tsr)
 0. [Dataset](#dataset)
 0. [Task Formulation](#Task-Formulation)
 
