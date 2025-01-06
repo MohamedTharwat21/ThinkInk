@@ -302,8 +302,8 @@ This section describes the contents, participants, experimental design, and prep
 **Dataset: ZuCo Benchmark**
 The dataset used for this project is derived from the **ZuCo Benchmark**, which combines data from two EEG datasets: **ZuCo [Hollenstein et al., 2018]** and **ZuCo 2.0 [Hollenstein et al., 2020]**. This benchmark provides a rich corpus of EEG signals and eye-tracking data collected during natural reading activities, making it highly suitable for EEG-to-Text research.
 
-## A New Dataset: ZuCo 2.0 for Studying Natural Reading and Annotation Processes
-A new dataset, ZuCo 2.0, was recorded and preprocessed to investigate the neural correlates of natural reading and annotation tasks using simultaneous eye-tracking and electroencephalography (EEG). This corpus provides gaze and brain activity data for 739 English sentences. 
+## This A New Dataset: ZuCo 2.0 for Studying Natural Reading and Annotation Processes
+This A new dataset, ZuCo 2.0, was recorded and preprocessed to investigate the neural correlates of natural reading and annotation tasks using simultaneous eye-tracking and electroencephalography (EEG). This corpus provides gaze and brain activity data for 739 English sentences. 
 
 * **349 sentences** were presented in a **normal reading paradigm**, where participants read naturally without any specific instructions beyond comprehension.
 * **390 sentences** were presented in a **task-specific paradigm**, where participants actively searched for a specific semantic relation type within the sentences, acting as a linguistic annotation task.
@@ -311,7 +311,7 @@ A new dataset, ZuCo 2.0, was recorded and preprocessed to investigate the neural
 ZuCo 2.0 complements the existing ZuCo 1.0 dataset by offering data specifically designed to analyze the cognitive processing differences between natural reading and annotation tasks. The data is freely available for download here: https://osf.io/2urht/.
 
 
-## Normal Reading NR& Task Specific Annotation Reading TSR
+## Normal Reading NR & Task Specific Annotation Reading TSR
 
 ### Normal Reading (NR) vs. Task-Specific Reading (TSR)
 
