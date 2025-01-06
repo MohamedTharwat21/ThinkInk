@@ -6,7 +6,7 @@
 0. [Introduction](#Introduction)
 0. [Model](#model)
 0. [Data Collection](#data-collection)
-0. [Normal Reading NR & Task Specific Annotation Reading TSR](#Normal-Reading-NR-&-Task-Specific-Annotation-Reading-TSR)
+0. [Normal Reading (NR) vs. Task-Specific Reading (TSR)](#Normal-Reading-(NR)-vs.-Task-Specific-Reading-(TSR))
 0. [Dataset](#dataset)
 0. [Task Formulation](#Task-Formulation)
 
@@ -311,9 +311,7 @@ This A new dataset, ZuCo 2.0, was recorded and preprocessed to investigate the n
 ZuCo 2.0 complements the existing ZuCo 1.0 dataset by offering data specifically designed to analyze the cognitive processing differences between natural reading and annotation tasks. The data is freely available for download here: https://osf.io/2urht/.
 
 
-## Normal Reading NR & Task Specific Annotation Reading TSR
-
-### Normal Reading (NR) vs. Task-Specific Reading (TSR)
+## Normal Reading (NR) vs. Task-Specific Reading (TSR)
 
 The key difference between normal reading (NR) and task-specific reading (TSR) lies in the purpose and focus of the reading task:
 
