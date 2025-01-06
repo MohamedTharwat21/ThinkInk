@@ -47,8 +47,6 @@ To address these challenges,we aim to re-calibrate subject-dependent EEG represe
 
 
 
-
-
 ## **Model**
 
 The EEG-to-Text model is designed to transform **word-level EEG features** into coherent, natural-language sentences. These features are derived after the **Feature Extraction Step**, where raw EEG signals are preprocessed and converted into usable data.  
@@ -314,6 +312,12 @@ ZuCo 2.0 complements the existing ZuCo 1.0 dataset by offering data specifically
 ## Normal Reading (NR) vs. Task-Specific Reading (TSR)
 
 The key difference between normal reading (NR) and task-specific reading (TSR) lies in the purpose and focus of the reading task:
+
+
+![image](https://github.com/user-attachments/assets/4aa58005-48d9-41d2-a2de-d03d1bbba6a6)
+
+**Figure 2: Example sentences on the recording screen: (left) a normal reading sentence, (middle) a control question for a
+ normal reading sentence, and (right) a task-specific annotation sentence.**
 
 **Normal Reading (NR):**
 
