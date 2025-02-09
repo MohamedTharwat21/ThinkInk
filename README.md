@@ -15,9 +15,11 @@
 
 The **Electroencephalography-to-Text (EEG-to-Text) generation** project lies at the intersection of neuroscience, artificial intelligence, and human-computer interaction. This groundbreaking technology focuses on translating brain activity, captured through EEG signals, directly into natural text. It represents a pivotal innovation in **Brain-Computer Interfaces (BCIs)**, enabling novel applications that enhance communication, accessibility, and productivity.
 
-### Model 
+### Brain Translator Model 
 
 ![image](https://github.com/user-attachments/assets/bec2e353-1b67-4562-b7b7-eb46d40c7145)
+
+**Figure 0** : This model, BrainTranslator, is designed to convert EEG brain signals into natural language sentences using a sequence-to-sequence (Seq2Seq) architecture with a transformer-based encoder and decoder.
 
 
 ### **Why EEG-to-Text Technology Matters**
