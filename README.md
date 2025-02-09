@@ -36,7 +36,7 @@ The **Electroencephalography-to-Text (EEG-to-Text) generation** project lies at 
 **Figure src** : https://spectrum.ieee.org/brain-computer-interface-speech
 
 
-##Unity Simulation
+## Unity Simulation
 
 
 
