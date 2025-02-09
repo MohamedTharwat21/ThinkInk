@@ -3,6 +3,7 @@
 
 ## Contents
 0. [Project Overview](#Project-Overview)
+0. [Unity Simulation](#Unity-Simulation) 
 0. [Introduction](#Introduction)
 0. [Model](#model)
 0. [Data Collection](#data-collection)
@@ -15,7 +16,7 @@
 
 The **Electroencephalography-to-Text (EEG-to-Text) generation** project lies at the intersection of neuroscience, artificial intelligence, and human-computer interaction. This groundbreaking technology focuses on translating brain activity, captured through EEG signals, directly into natural text. It represents a pivotal innovation in **Brain-Computer Interfaces (BCIs)**, enabling novel applications that enhance communication, accessibility, and productivity.
 
-### Brain Translator Model 
+### Our Brain Translator Model 
 
 ![image](https://github.com/user-attachments/assets/bec2e353-1b67-4562-b7b7-eb46d40c7145)
 
@@ -33,6 +34,13 @@ The **Electroencephalography-to-Text (EEG-to-Text) generation** project lies at 
 **Figure 1** : Decoding brain signals of a disabled woman.
 
 **Figure src** : https://spectrum.ieee.org/brain-computer-interface-speech
+
+
+##Unity Simulation
+
+
+
+
 
 
 ## Introduction
