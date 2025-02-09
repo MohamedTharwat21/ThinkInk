@@ -15,6 +15,11 @@
 
 The **Electroencephalography-to-Text (EEG-to-Text) generation** project lies at the intersection of neuroscience, artificial intelligence, and human-computer interaction. This groundbreaking technology focuses on translating brain activity, captured through EEG signals, directly into natural text. It represents a pivotal innovation in **Brain-Computer Interfaces (BCIs)**, enabling novel applications that enhance communication, accessibility, and productivity.
 
+### Model 
+
+![image](https://github.com/user-attachments/assets/bec2e353-1b67-4562-b7b7-eb46d40c7145)
+
+
 ### **Why EEG-to-Text Technology Matters**
 - **Purpose**: Provides life-changing solutions for individuals who cannot speak or write due to conditions like ALS, paralysis, or severe motor impairments.  
 - **Impact**: By decoding their thoughts into text, the technology restores independence, enhances communication, and improves the quality of life.
