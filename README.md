@@ -18,7 +18,7 @@ The **Electroencephalography-to-Text (EEG-to-Text) generation** project lies at 
 
 ### Our Brain Translator Model 
 
-![image](https://github.com/user-attachments/assets/bec2e353-1b67-4562-b7b7-eb46d40c7145)
+![Alt text](https://github.com/MohamedTharwat21/ThinkInk/blob/main/BrainTranslator%20.jpg)
 
 **Figure 0** : This model, BrainTranslator, is designed to convert EEG brain signals into natural language sentences using a sequence-to-sequence (Seq2Seq) architecture with a transformer-based encoder and decoder.
 
