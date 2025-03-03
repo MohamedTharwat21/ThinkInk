@@ -84,11 +84,11 @@ This stage creates unified word-level features by concatenating EEG features fro
 
  
 
-### **2. Pre-Encoder**
+### **2. Encoder**
 
 The pre-encoder transforms EEG feature space into the embedding space required by the pre-trained Seq2Seq model.  
 
-#### **Components of the Pre-Encoder**
+#### **Components of the Encoder**
 1. **Non-Linear Transformation**:  
    - Maps concatenated EEG features to a higher-dimensional space (**size 840**).  
 2. **Transformer Encoder**:  
@@ -103,23 +103,23 @@ The pre-encoder transforms EEG feature space into the embedding space required b
 
  
 
-### **3. Pre-Trained Seq2Seq Model**
+### **3. Seq2Seq Model**
 
 This component is responsible for generating the output sentence based on the processed EEG features.  
 
 #### **Components of the Seq2Seq Model**
-1. **Pre-Trained Encoder**:  
+1. **Encoder**:  
    - Encodes EEG-derived embeddings into meaningful sequences.  
-2. **Pre-Trained Decoder**:  
+2. **Decoder**:  
    - Decodes the encoded representation to generate natural language sentences.  
 
 - **Feature Size**: Both encoder and decoder operate with features of size **1024**.  
 - **Goal**: Ensure high-quality semantic representation and natural language decoding.  
 
-| **Component**          | **Function**                           | **Feature Size** |
-|-------------------------|----------------------------------------|------------------|
-| **Pre-Trained Encoder** | Encodes EEG-derived embeddings         | 1024             |
-| **Pre-Trained Decoder** | Generates natural language sentences   | 1024             |
+| **Component**          | **Function**                | **Feature Size** |
+|-------------------------|----------------------------|------------------|
+| **Encoder** | Encodes EEG-derived embeddings         | 1024             |
+| **Decoder** | Generates natural language sentences   | 1024             |
 
  
 
@@ -127,9 +127,9 @@ This component is responsible for generating the output sentence based on the pr
 
 | **Stage**                 | **Input**                       | **Output**                                  | **Key Processing**                                     |
 |---------------------------|----------------------------------|---------------------------------------------|-------------------------------------------------------|
-| **Word-Level Construction**| EEG features (size 105 per band) | Unified word-level EEG feature              | Concatenation of frequency band features              |
-| **Pre-Encoder**           | Word-level EEG feature           | Embedded feature (size 840)                 | Non-linear transformation and sequential encoding     |
-| **Seq2Seq Model**         | Embedded feature (size 840)      | Natural language sentence                   | Pre-trained encoder-decoder sequence generation       |
+| **Word-Level Construction**| EEG features (size 105 per band) | Unified word-level EEG feature              | Concatenation of frequency band features               |
+| **Encoder**                | Word-level EEG feature           | Embedded feature (size 840)                 | Non-linear transformation and sequential encoding     |
+| **Seq2Seq Model**          | Embedded feature (size 840)      | Natural language sentence                   | Pre-trained encoder-decoder sequence generation       |
 
 This modular pipeline ensures that raw EEG signals are effectively translated into meaningful text, enabling practical applications for individuals with communication impairments.
 
