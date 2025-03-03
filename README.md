@@ -86,7 +86,7 @@ This stage creates unified word-level features by concatenating EEG features fro
 
 ### **2. Encoder**
 
-The pre-encoder transforms EEG feature space into the embedding space required by the pre-trained Seq2Seq model.  
+The encoder transforms EEG feature space into the embedding space required by the trained Seq2Seq model.  
 
 #### **Components of the Encoder**
 1. **Non-Linear Transformation**:  
@@ -129,7 +129,7 @@ This component is responsible for generating the output sentence based on the pr
 |---------------------------|----------------------------------|---------------------------------------------|-------------------------------------------------------|
 | **Word-Level Construction**| EEG features (size 105 per band) | Unified word-level EEG feature              | Concatenation of frequency band features               |
 | **Encoder**                | Word-level EEG feature           | Embedded feature (size 840)                 | Non-linear transformation and sequential encoding     |
-| **Seq2Seq Model**          | Embedded feature (size 840)      | Natural language sentence                   | Pre-trained encoder-decoder sequence generation       |
+| **Seq2Seq Model**          | Embedded feature (size 840)      | Natural language sentence                   | Encoder-decoder sequence generation       |
 
 This modular pipeline ensures that raw EEG signals are effectively translated into meaningful text, enabling practical applications for individuals with communication impairments.
 
