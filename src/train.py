@@ -77,6 +77,8 @@ def train_eeg_to_text_model():
 
 
 def inference_with_one_eeg():
+    from dataset import whole_dataset_dicts
+    from dataset_handler import get_input_sample 
     t5_tokenizer = T5Tokenizer.from_pretrained('t5-small')
     bands = ['_t1', '_t2', '_a1', '_a2', '_b1', '_b2', '_g1', '_g2']
     eeg_input = get_input_sample(whole_dataset_dicts[0]['ZAB'][55],
