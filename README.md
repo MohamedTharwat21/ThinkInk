@@ -38,6 +38,8 @@ The **Electroencephalography-to-Text (EEG-to-Text) generation** project lies at 
 
 ## Unity Simulation
 
+<img width="858" height="398" alt="image" src="https://github.com/user-attachments/assets/a86b2062-de1b-4f2b-9ea7-9d6711f662bc" />
+
 
 
 
