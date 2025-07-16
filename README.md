@@ -6,7 +6,7 @@
 0. [Unity Simulation](#Unity-Simulation) 
 0. [Introduction](#Introduction)
 0. [Model](#model)
-0. [Data Collection](#data-collection)
+0. [Data Source](#data-source)
 0. [Normal Reading (NR) vs. Task-Specific Reading (TSR)](#normal-reading-nr-vs-task-specific-reading-tsr)
 0. [Dataset](#dataset)
 0. [Task Formulation](#Task-Formulation)
@@ -62,7 +62,6 @@ Neurological conditions, such as spinal cord injuries and neuromuscular disorder
 
 ### Proposed Solution
 To address these challenges,we aim to re-calibrate subject-dependent EEG representations into semantic-dependent EEG representations, making them more suitable for EEG-to-Text generation tasks.
-
 
 
 ## **Model**
@@ -139,7 +138,7 @@ This modular pipeline ensures that raw EEG signals are effectively translated in
 
 
 
-## Data Collection
+## Data Source
 
 ### **ZuCo 2.0 Corpus: Data Collection and Processing**
 This section describes the contents, participants, experimental design, and preprocessing techniques used in the ZuCo 2.0 dataset.
@@ -190,7 +189,6 @@ This section describes the contents, participants, experimental design, and prep
 | 34           | 44% Male                |
 
 
- 
 
 #### **Reading Material Statistics**
 
@@ -210,44 +208,6 @@ This section describes the contents, participants, experimental design, and prep
 
 #### Equipment and Setup
 - **EEG System**: 128-channel Geodesic Hydrocel system (Electrical Geodesics).  
-- **Sampling Rate**: 500 Hz.  
-- **Bandpass Filter**: 0.1 to 100 Hz.  
-- **Reference Electrode**: Set at electrode **Cz**.  
-- **Electrode Setup**:  
-  - Head circumference measured to select the appropriate EEG net size.  
-  - Impedance of each electrode kept below **40 kOhm** to ensure proper contact.  
-  - Impedance levels checked every 30 minutes after every 50 sentences.  
-
-
-| **Specification**      | **Details**                   |
-|-------------------------|-------------------------------|
-| **System**             | Geodesic Hydrocel (128-channel) |
-| **Sampling Rate**       | 500 Hz                       |
-| **Bandpass**            | 0.1–100 Hz                   |
-| **Reference Electrode** | Cz                           |
-| **Electrode Impedance** | ≤ 40 kOhm                    |
-
-
-
-### **3. Data Preprocessing and Extraction**
-
-#### Raw and Preprocessed Data
-- **Tools Used**:  
-  - Preprocessing performed using **Automagic (version 1.4.6)** for automatic EEG data cleaning and validation.  
-  - **MARA (Multiple Artifact Rejection Algorithm)**: A supervised machine learning algorithm used for automatic artifact rejection.  
-
-
-
-![image](https://github.com/user-attachments/assets/9edfb463-0e92-45d5-8ec3-7bc9d8874098)
-               **A**
-
-
-![image](https://github.com/user-attachments/assets/f2290890-278b-40aa-bc63-5054167ccfb6)
-               **B**
-
-
-**Figure 3 and 4** : Visualization EEG data for a single sentence.
-**(A)** Raw EEG data during a single sentence. **(B)** Same data as in **(A)** after preprocessing.
 
 
 
@@ -262,56 +222,6 @@ This section describes the contents, participants, experimental design, and prep
 | **EEG Channels**         | 105                 | Scalp recordings         |
 | **EOG Channels**         | 9                   | Artifact removal         |
 | **Discarded Channels**   | 14                  | Neck and face channels   |
-
-#### Artifact Rejection
-- **Artifacts Addressed**: Eye movements and muscle noise.  
-- **Artifact Rejection Criterion**: Trials with transient noise above **90 µV** were excluded.
-
-
-### **4. Synchronization and Feature Extraction**
-
-#### Synchronization
-- EEG signals synchronized with eye-tracking data to enable analyses time-locked to fixation onsets.  
-
-#### Oscillatory Power Measures
-- **Frequency Bands**:  
-  - Theta1 (4–6 Hz), Theta2 (6.5–8 Hz).  
-  - Alpha1 (8.5–10 Hz), Alpha2 (10.5–13 Hz).  
-  - Beta1 (13.5–18 Hz), Beta2 (18.5–30 Hz).  
-  - Gamma1 (30.5–40 Hz), Gamma2 (40–49.5 Hz).  
-- **Processing Steps**:  
-  - Bandpass filtering for each frequency band.  
-  - **Hilbert Transformation** applied to preserve temporal amplitude information.  
-
-| **Frequency Band** | **Range (Hz)** |
-|--------------------|----------------|
-| **Theta1**         | 4–6            |
-| **Theta2**         | 6.5–8          |
-| **Alpha1**         | 8.5–10         |
-| **Alpha2**         | 10.5–13        |
-| **Beta1**          | 13.5–18        |
-| **Beta2**          | 18.5–30        |
-| **Gamma1**         | 30.5–40        |
-| **Gamma2**         | 40–49.5        |
-
-#### Sentence-Level EEG Features
-- **Power Calculations**:  
-  - Power computed for each frequency band.  
-  - Difference in power spectra between frontal left and right homologue electrodes.  
-- **Eye-Tracking Features**: Corresponding EEG features computed for each fixation.  
-
-| **Feature**                 | **Description**                                |
-|-----------------------------|-----------------------------------------------|
-| **Frequency Band Power**    | Power calculated for each band.               |
-| **Electrode Differences**   | Power difference between left/right pairs.    |
-| **Artifact Rejection**      | Channels excluded for noise > 90 µV.          |
-
-
-### **5. Summary**
-- The data collection process ensures high-quality EEG recordings synchronized with eye-tracking data.  
-- Advanced preprocessing techniques, such as MARA and Hilbert transformations, enhance the usability of the dataset for downstream analyses.  
-- The dataset captures meaningful EEG signals corresponding to natural reading tasks, enabling in-depth exploration of brain activity and behavior.
-
 
 ## Dataset
 
@@ -337,32 +247,6 @@ The key difference between normal reading (NR) and task-specific reading (TSR) l
 **Figure 2: Example sentences on the recording screen: (left) a normal reading sentence, (middle) a control question for a
  normal reading sentence, and (right) a task-specific annotation sentence.**
 
-**Normal Reading (NR):**
-
-* **Objective:** Participants read the sentences naturally, focusing on general comprehension without any specific task.
-* **Instructions:** No specific instructions other than to read and understand the text.
-* **Example (Figure 2, left):** "He served in the United States Army in World War II, then got a law degree from Tulane University."
-* **Control Condition:** Some sentences (12%) are followed by simple comprehension questions with multiple-choice answers, such as: "Which university did he get his degree from?"
-* **Cognitive Load:** Reflects natural reading processes and comprehension without added cognitive demands like searching for specific information.
-
-**Task-Specific Reading (TSR):**
-
-* **Objective:** Participants search for a specific relation (e.g., whether a sentence contains a certain type of information or relation).
-* **Instructions:** Participants actively annotate the text by deciding whether the relation is present in the sentence.
-* **Example (Figure 2, right):** "After this initial success, Ford left Edison Illuminating and, with other investors, formed the Detroit Automobile Company." Participants answer: "Does this sentence contain the founder relation?" (Yes/No).
-* **Control Condition:** A minority of sentences (17%) do not include the relation, serving as a control to ensure participants are not biased towards always finding the relation.
-* **Cognitive Load:** Higher cognitive load due to the task of actively searching and annotating, rather than passively reading for comprehension.
-
-**Summary of Differences:**
-
-| Feature        | Normal Reading (NR) | Task-Specific Reading (TSR) |
-|----------------|----------------------|----------------------------|
-| Purpose        | Natural comprehension | Searching for specific relations |
-| Focus          | General understanding | Task-specific annotation |
-| Cognitive Effort | Low to moderate     | High (due to active searching) |
-| Example Interaction | Multiple-choice questions (12% of cases) | Yes/No relation-based annotation |
-
-**In summary, NR simulates everyday reading with occasional comprehension checks, while TSR involves actively searching for a specific piece of information, requiring more focused attention and effort.**
 
 **Examples of Normal Reading (NR) vs. Task-Specific Reading (TSR):**
 
@@ -460,31 +344,3 @@ Statistics for the ZuCo benchmark. **“# pairs”** means the number of EEG-tex
 - Wang, S., & Ji, H. (2022). *Unified Representation Learning for EEG-to-Text Tasks.*
 
 This dataset serves as the foundation for training and validating the BrainTranslator model, enabling the transformation of EEG signals into meaningful text representations.
-
-
-
-## Task Formulation
-
-**1. Input and Output:**
-
-* The input is a sequence of EEG features denoted as E = {e1, e2, ..., eB}, where each e ∈ R^n is a word-level EEG feature vector.
-* The output is a sentence S = {s1, s2, ..., sS}, where s_i represents tokens forming the sentence.
-
-**2. Model Parameters:**
-
-* θ represents the parameters of the sequence-to-sequence model used for generating the text sentence from the EEG features.
-
-**3. Subjects and Dataset Partitioning:**
-
-* Each EEG feature sequence E corresponds to a subject p_i, with all subjects forming a set P.
-* During training, EEG-text pairs are used from various subjects in the set P.
-* During testing, the sentences are completely unseen, ensuring that the test set also adheres to the same set of subjects P, meaning the model generalizes within the subjects present in the dataset.
-
-**4. Key Constraints:**
-
-* The train, validation, and test sets maintain the same set of subjects P, ensuring consistency in the distribution.
-
-
- 
-
-
